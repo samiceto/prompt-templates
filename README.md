@@ -1,14 +1,12 @@
-# prompt-templates
-The templates for prompt with different techniques that can be used according to usage and need.
+# Prompt-templates
 ## Important links  
-[How LLMs Work: Top 10 Executive-Level Questions](https://sloanreview.mit.edu/article/how-llms-work/)  
-[Panaversity YouTube Class Playlist](https://www.youtube.com/playlist?list=PL0vKVrkG4hWpeKmZyCRTpfRiLQ13b5uRX)
-## see llms ranks  
-[https://lmarena.ai/leaderboard](https://lmarena.ai/leaderboard)
-## playgrounds for prompt testing  
-[openai](https://platform.openai.com/chat/)  
-[gemini](https://aistudio.google.com/)  
-[anthropic/cloud](https://console.anthropic.com/)  
+*[How LLMs Work: Top 10 Executive-Level Questions](https://sloanreview.mit.edu/article/how-llms-work/)  
+*[Panaversity YouTube Class Playlist](https://www.youtube.com/playlist?list=PL0vKVrkG4hWpeKmZyCRTpfRiLQ13b5uRX) 
+*[check llms ranking](https://lmarena.ai/leaderboard)
+*[openai](https://platform.openai.com/chat/)  
+*[gemini](https://aistudio.google.com/)  
+*[anthropic/cloud](https://console.anthropic.com/)  
+______
 ## prompt cotch  
 ```  
 You are my Prompt Coach. I will give you a rough or unclear prompt. 
@@ -20,12 +18,13 @@ Your task is to:
 
 Here’s my rough prompt: [INSERT YOUR PROMPT HERE]  
 ```  
+______
 ## Zero-Shot Prompting  
 ```
 Classify this movie review as positive, negative, or neutral:
 "The film was visually stunning but the plot felt rushed."  
 ```
-
+______
 ##  One-Shot Prompting  
 ```
 Translate English to French:
@@ -36,6 +35,7 @@ French: "Bonjour, comment allez-vous?"
 English: "Where is the library?"
 French:  
 ```
+______
 ## Few-Shot Prompting  
 ```
 Convert customer feedback to structured data:
@@ -49,7 +49,7 @@ JSON: {"service": "positive", "food": "positive", "overall": "positive"}
 Feedback: "Terrible food and rude staff"
 JSON:  
 ```
-
+______
 ## System Prompting  
 ```
 You are a helpful travel guide. Provide practical, accurate information about destinations. Always include:
@@ -60,16 +60,19 @@ You are a helpful travel guide. Provide practical, accurate information about de
 
 User: Tell me about visiting Tokyo.
 ```  
+______
 ## Role Prompting  
 ```
 Act as an experienced software architect. I need help designing a scalable web application for 1 million users. What architecture patterns should I consider?  
 ```  
+______
 ## Contextual Prompting  
 ```
 Context: You're writing for a tech blog aimed at beginners who have never coded before.
 
 Write a 200-word explanation of what an API is, using simple language and practical examples.
 ```  
+______
 ## Chain of Thought (CoT) Prompting
 ```
 Solve this step by step:
@@ -91,17 +94,8 @@ Let me think through this step by step:
 
         Most common answer: $40
         ```  
-
+______
 * ### Step-Back Prompting  
-* #### Example 1:
-        ```
-        First, what are the key principles of good user interface design?
-
-        [Get response]
-
-        Now, using those principles, redesign this mobile app's login screen: [description]
-        ```
-* #### Example 2:
         ```
         Step 1: First, what are the key factors that generally affect website loading speed?
 
@@ -121,17 +115,9 @@ Let me think through this step by step:
         4. **Caching**: Use a Content Delivery Network (CDN) like Cloudflare to cache static content globally. Set browser cache headers for repeat visitors.
         5. **Third-Party Plugins**: Audit and remove unnecessary plugins. Asynchronously load scripts for analytics or ads to avoid blocking page rendering.
         ```  
+______
 * ### ReAct (Reasoning + Acting)
-* #### Example 1:
-        ```
-        I need to find out how many children the members of Metallica have in total.
 
-        Thought: I need to find information about each band member and their children.
-        Action: Search for "Metallica band members"
-        Observation: [results]
-        Thought: Now I need to search for each member individually...
-        ```
-* #### Exmple 2:
         ```
         Question: What is the current population of Tokyo, and how does it compare to New York City?
 
@@ -153,8 +139,10 @@ Let me think through this step by step:
 
         Final Answer: Tokyo's population is approximately 37.4 million, compared to New York City's 23.6 million, making Tokyo significantly larger.
         ```  
+______
 * ### Tree of Thoughts (ToT)
     * use asyncio.gether to get the multple output and git this to synthisizer agent to choose the best one
+______
 ## Best Practices for Effective Prompts
 ### 1. Be Specific and Clear
 #### Bad:
