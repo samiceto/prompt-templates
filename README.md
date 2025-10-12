@@ -1,11 +1,11 @@
 # Prompt-templates
 ## Important links  
-*[How LLMs Work: Top 10 Executive-Level Questions](https://sloanreview.mit.edu/article/how-llms-work/)  
-*[Panaversity YouTube Class Playlist](https://www.youtube.com/playlist?list=PL0vKVrkG4hWpeKmZyCRTpfRiLQ13b5uRX) 
-*[check llms ranking](https://lmarena.ai/leaderboard)
-*[openai](https://platform.openai.com/chat/)  
-*[gemini](https://aistudio.google.com/)  
-*[anthropic/cloud](https://console.anthropic.com/)  
+* [How LLMs Work: Top 10 Executive-Level Questions](https://sloanreview.mit.edu/article/how-llms-work/)  
+* [Panaversity YouTube Class Playlist](https://www.youtube.com/playlist?list=PL0vKVrkG4hWpeKmZyCRTpfRiLQ13b5uRX) 
+* [check llms ranking](https://lmarena.ai/leaderboard)
+* [openai](https://platform.openai.com/chat/)  
+* [gemini](https://aistudio.google.com/)  
+* [anthropic/cloud](https://console.anthropic.com/)  
 ______
 ## prompt cotch  
 ```  
