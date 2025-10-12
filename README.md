@@ -6,6 +6,6 @@ The templates for prompt with different techniques that can be used according to
 ## see llms ranks  
 [https://lmarena.ai/leaderboard](https://lmarena.ai/leaderboard)
 ## playgrounds for prompt testing  
-[openai](https://platform.openai.com/chat/)
-[gemini](https://aistudio.google.com/)
-[anthropic/cloud](https://console.anthropic.com/)
+[openai](https://platform.openai.com/chat/)  
+[gemini](https://aistudio.google.com/)  
+[anthropic/cloud](https://console.anthropic.com/)  
