@@ -259,6 +259,7 @@ Return analysis as JSON:
 }
 ```
 ## Document your prompts systematically:  
-Prompt Version|	Goal|	Model|	Temperature|	Output Quality|	Notes
-v1.0|	Generate blog post|	GPT-4|	0.7	Good|	Too formal
-v1.1|	Generate blog post|	GPT-4|	0.7	Better|	Added tone guidance  
+| Prompt Version |	Goal |	Model |	Temperature |	Output Quality |	Notes |
+|--------------|---------|--------|-------------|------------------|----------|
+| v1.0 |	Generate blog post |	GPT-4 |	0.7	Good |	Too formal |
+| v1.1 |	Generate blog post |	GPT-4 |	0.7	Better |	Added tone guidance   |
