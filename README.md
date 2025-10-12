@@ -77,17 +77,17 @@ If I was 6 when my sister was half my age, how old is my sister when I'm 40?
 
 Let me think through this step by step:
 ```  
-    ### Self-Consistency  
+* ### Self-Consistency  
         ```
         Question: If a store offers a 20% discount on a $50 item, what is the final price?
 
-Generate 3 different reasoning paths for this question and select the most consistent answer.
+        Generate 3 different reasoning paths for this question and select the most consistent answer.
 
-Path 1: To find the final price, calculate the discount: 20% of $50 is 0.20 × 50 = $10. Subtract this from the original price: $50 - $10 = $40. The final price is $40.
+        Path 1: To find the final price, calculate the discount: 20% of $50 is 0.20 × 50 = $10. Subtract this from the original price: $50 - $10 = $40. The final price is $40.
 
-Path 2: A 20% discount means paying 80% of the original price. So, 80% of $50 is 0.80 × 50 = $40. Therefore, the final price is $40.
+        Path 2: A 20% discount means paying 80% of the original price. So, 80% of $50 is 0.80 × 50 = $40. Therefore, the final price is $40.
 
-Path 3: Compute the discount amount: 20% = 0.20, so 0.20 × $50 = $10 off. The original price is $50, so after the discount, it’s $50 - $10 = $40. The final price is $40.
+        Path 3: Compute the discount amount: 20% = 0.20, so 0.20 × $50 = $10 off. The original price is $50, so after the discount, it’s $50 - $10 = $40. The final price is $40.
 
-Most common answer: $40
+        Most common answer: $40
         ```
