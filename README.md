@@ -80,6 +80,7 @@ If I was 6 when my sister was half my age, how old is my sister when I'm 40?
 
 Let me think through this step by step:
 ```  
+______
 * ### Self-Consistency  
         ```
         Question: If a store offers a 20% discount on a $50 item, what is the final price?
@@ -145,22 +146,19 @@ ______
 ______
 ## Best Practices for Effective Prompts
 ### 1. Be Specific and Clear
-#### Bad:
-```
-Write about dogs.  
-```
-#### Good:
 ``` 
 Write a 300-word informative article about the health benefits of owning a dog, focusing on mental health, physical activity, and social connections. Use a friendly, accessible tone for general readers.
 ```
+______
 ### 2. Use Action Verbs
 Be explicit about what you want the AI to do:
 
 *Analyze, Compare, Create, Describe, Evaluate
 *Extract, Generate, List, Rank, Summarize
 *Translate, Write, Explain, Classify
-
+______
 ### 3. Provide Examples When Possible  
+______
 ### 4. Structure Your Prompts  
 ```
 Task: [What you want done]
@@ -168,7 +166,7 @@ Context: [Background information]
 Format: [How you want the output structured]
 Example: [Sample of desired output]
 ```
-
+______
 ### 5. Use Instructions Over Constraints
 #### Better:
 ```
@@ -178,6 +176,7 @@ Write a professional email summarizing the key points from our meeting.
 ```
 Write an email but don't make it too long or too informal or too detailed.
 ```
+______
 ### 6. Control Output Format
 ```
 Return your answer as a JSON object with the following structure:
@@ -187,23 +186,26 @@ Return your answer as a JSON object with the following structure:
   "confidence_level": "high/medium/low"
 }
 ```
+______
 ### 7. Use Variables for Reusability
 ```
 Role: You are a {expertise} expert
 Task: Analyze the {document_type} and provide recommendations for {target_audience}
 Context: This is for a {industry} company with {company_size} employees
 ```
+______
 ### 8. Iterate and Document
 *Keep track of what works and what doesn't
 *Document your successful prompts
 *Test variations to improve performance  
+______
 ## Common Pitfalls and How to Avoid Them  
 1. Ambiguous Instructions
 2. Contradictory Instructions
 3. Too Many Constraints
 4. Ignoring Token Limits
 5. Not Testing Variations  
-
+______
 ### Code Generation Example:
 ```
 Write a Python function that:
@@ -225,12 +227,14 @@ Please include:
 - Example usage
 - Brief explanation of the approach
 ```
+______
 ##  Prompt Chaining
 ```
 Step 1: Research the topic
 Step 2: Create an outline based on research
 Step 3: Write the full content based on outline
 ```
+______
 ## Leverage Structured Outputs
 ```
 Return analysis as JSON:
@@ -246,6 +250,7 @@ Return analysis as JSON:
   ]
 }
 ```
+______
 ## Document your prompts systematically:  
 | Prompt Version |	Goal |	Model |	Temperature |	Output Quality |	Notes |
 |--------------|---------|--------|-------------|------------------|----------|
