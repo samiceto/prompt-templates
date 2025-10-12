@@ -9,3 +9,14 @@ The templates for prompt with different techniques that can be used according to
 [openai](https://platform.openai.com/chat/)  
 [gemini](https://aistudio.google.com/)  
 [anthropic/cloud](https://console.anthropic.com/)  
+## prompt cotch  
+```  
+You are my Prompt Coach. I will give you a rough or unclear prompt. 
+Your task is to:
+1. Clarify it
+2. Add missing context
+3. Structure it for best results
+4. Suggest 2–3 alternative versions (different styles: simple, detailed, structured)
+
+Here’s my rough prompt: [INSERT YOUR PROMPT HERE]  
+```
