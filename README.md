@@ -90,4 +90,175 @@ Let me think through this step by step:
         Path 3: Compute the discount amount: 20% = 0.20, so 0.20 × $50 = $10 off. The original price is $50, so after the discount, it’s $50 - $10 = $40. The final price is $40.
 
         Most common answer: $40
+        ```  
+
+* ### Step-Back Prompting  
+* #### Example 1:
         ```
+        First, what are the key principles of good user interface design?
+
+        [Get response]
+
+        Now, using those principles, redesign this mobile app's login screen: [description]
+        ```
+* #### Example 2:
+        ```
+        Step 1: First, what are the key factors that generally affect website loading speed?
+
+        Response: Key factors include:
+        - Server response time (hosting quality, server location)
+        - Image and asset optimization (file size, compression)
+        - Code efficiency (minifying CSS/JavaScript, reducing HTTP requests)
+        - Caching strategies (browser caching, CDNs)
+        - Third-party scripts (ads, analytics)
+
+        Step 2: Using these factors, provide specific recommendations to optimize the loading speed of an e-commerce website with heavy product images and multiple third-party plugins.
+
+        Response:
+        1. **Server Optimization**: Choose a reliable hosting provider with servers close to your audience. Enable server-side caching (e.g., Redis or Varnish).
+        2. **Image Optimization**: Compress product images using formats like WebP. Implement lazy loading to defer off-screen images.
+        3. **Code Efficiency**: Minify CSS and JavaScript files. Combine small files to reduce HTTP requests.
+        4. **Caching**: Use a Content Delivery Network (CDN) like Cloudflare to cache static content globally. Set browser cache headers for repeat visitors.
+        5. **Third-Party Plugins**: Audit and remove unnecessary plugins. Asynchronously load scripts for analytics or ads to avoid blocking page rendering.
+        ```  
+* ### ReAct (Reasoning + Acting)
+* #### Example 1:
+        ```
+        I need to find out how many children the members of Metallica have in total.
+
+        Thought: I need to find information about each band member and their children.
+        Action: Search for "Metallica band members"
+        Observation: [results]
+        Thought: Now I need to search for each member individually...
+        ```
+* #### Exmple 2:
+        ```
+        Question: What is the current population of Tokyo, and how does it compare to New York City?
+
+        Thought: I need to find the current population of Tokyo and New York City to compare them. I should start by searching for the latest population data for Tokyo.
+
+        Action: web_search
+        <parameter name="query">current population of Tokyo 2025</parameter
+
+        Observation: [Assume tool response: According to recent estimates, Tokyo's population in 2025 is approximately 37.4 million in the metropolitan area.]
+
+        Thought: Now I have Tokyo's population. Next, I need the population for New York City.
+
+        Action: web_search
+        <parameter name="query">current population of New York City 2025</parameter
+
+        Observation: [Assume tool response: New York City's metropolitan area population in 2025 is estimated at about 23.6 million.]
+
+        Thought: With both figures, I can compare them. Tokyo has a larger population than New York City by about 13.8 million people.
+
+        Final Answer: Tokyo's population is approximately 37.4 million, compared to New York City's 23.6 million, making Tokyo significantly larger.
+        ```  
+* ### Tree of Thoughts (ToT)
+    * use asyncio.gether to get the multple output and git this to synthisizer agent to choose the best one
+## Best Practices for Effective Prompts
+### 1. Be Specific and Clear
+#### Bad:
+```
+Write about dogs.  
+```
+#### Good:
+``` 
+Write a 300-word informative article about the health benefits of owning a dog, focusing on mental health, physical activity, and social connections. Use a friendly, accessible tone for general readers.
+```
+### 2. Use Action Verbs
+Be explicit about what you want the AI to do:
+
+*Analyze, Compare, Create, Describe, Evaluate
+*Extract, Generate, List, Rank, Summarize
+*Translate, Write, Explain, Classify
+
+### 3. Provide Examples When Possible  
+### 4. Structure Your Prompts  
+```
+Task: [What you want done]
+Context: [Background information]
+Format: [How you want the output structured]
+Example: [Sample of desired output]
+```
+
+### 5. Use Instructions Over Constraints
+#### Better:
+```
+Write a professional email summarizing the key points from our meeting.
+```
+#### Avoid:
+```
+Write an email but don't make it too long or too informal or too detailed.
+```
+### 6. Control Output Format
+```
+Return your answer as a JSON object with the following structure:
+{
+  "main_idea": "string",
+  "supporting_points": ["string", "string"],
+  "confidence_level": "high/medium/low"
+}
+```
+### 7. Use Variables for Reusability
+```
+Role: You are a {expertise} expert
+Task: Analyze the {document_type} and provide recommendations for {target_audience}
+Context: This is for a {industry} company with {company_size} employees
+```
+### 8. Iterate and Document
+*Keep track of what works and what doesn't
+*Document your successful prompts
+*Test variations to improve performance  
+## Common Pitfalls and How to Avoid Them  
+1. Ambiguous Instructions
+2. Contradictory Instructions
+3. Too Many Constraints
+4. Ignoring Token Limits
+5. Not Testing Variations  
+
+### Code Generation Example:
+```
+Write a Python function that:
+
+Requirements:
+- Sorts a list of dictionaries by a specified key
+- Handles missing keys gracefully (items without key go to end)
+- Supports both ascending and descending order
+- Includes proper error handling
+- Has clear documentation
+
+Example usage:
+data = [{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]
+result = sort_by_key(data, "age", descending=False)
+
+Please include:
+- Function definition with type hints
+- Docstring with parameters and return value
+- Example usage
+- Brief explanation of the approach
+```
+##  Prompt Chaining
+```
+Step 1: Research the topic
+Step 2: Create an outline based on research
+Step 3: Write the full content based on outline
+```
+## Leverage Structured Outputs
+```
+Return analysis as JSON:
+{
+  "summary": "brief overview",
+  "key_insights": ["insight1", "insight2"],
+  "recommendations": [
+    {
+      "action": "specific action",
+      "priority": "high/medium/low",
+      "timeline": "timeframe"
+    }
+  ]
+}
+```
+## Document your prompts systematically:  
+Prompt Version|	Goal|	Model|	Temperature|	Output Quality|	Notes
+v1.0|	Generate blog post|	GPT-4|	0.7	Good|	Too formal
+v1.1|	Generate blog post|	GPT-4|	0.7	Better|	Added tone guidance  
