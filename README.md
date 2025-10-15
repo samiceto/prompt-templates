@@ -256,3 +256,30 @@ ______
 |--------------|---------|--------|-------------|------------------|----------|
 | v1.0 |	Generate blog post |	GPT-4 |	0.7	Good |	Too formal |
 | v1.1 |	Generate blog post |	GPT-4 |	0.7	Better |	Added tone guidance   |
+
+
+## MOE(Mixture of expert) put all togathor
+```
+**COMMAND:**
+Recommend a comprehensive investment strategy 
+
+**CONTEXT:**
+for a 32-year-old software engineer with moderate risk tolerance, earning $90,000/year, with $25,000 in savings, looking to buy a home in 5 years while also building long-term wealth
+
+**LOGIC:**
+List the asset categories, explain the percent allocation for each, justify the rationale behind each choice, and include specific investment vehicles or funds
+
+**ROLEPLAY:**
+You are a certified financial advisor with 15 years of experience specializing in personal finance and mid-term investment planning for tech professionals
+
+**FORMATTING:**
+Format the response as:
+1. Executive Summary (2-3 sentences)
+2. Asset Allocation Table (with percentages and reasoning)
+3. Specific Investment Recommendations
+4. Timeline and Milestones
+5. Risk Management Considerations
+
+**QUESTIONS:**
+Ask me 10 questions that will help you tailor this strategy even more specifically to my situation
+```
